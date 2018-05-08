@@ -1,14 +1,17 @@
-:root {  --primary: orangered;  }
-
 * {
   margin: 0;
   padding: 0;
 }
 
+.primary-color, .main-nav a:hover {
+  background: orangered;
+  color: white;
+}
+
 body {  font-size: 18px;  }
 
 h1 {  font-size: 45px;  }
-h2 {  font-size: 35px;  }
+h2 {  font-size: 35px;  margin-top: 14px;   }
 h3 {  font-size: 28px;  }
 h4 {  font-size: 20px;  } 
 
@@ -34,11 +37,6 @@ header h3 {  float: left; }
   font-weight: bold;
   color: black;
 }
-
-.main-nav a:hover {
-  background: var(--primary);
-  color: white;
-} 
 
 #showcase {
   background: url('../img/showcase.jpg') center;
@@ -72,8 +70,6 @@ header h3 {  float: left; }
   padding: 8px 15px;
   font-size: 20px;
   margin-top: 40px;
-  background: var(--primary);
-  color: white;
   border-radius: 8px;
   border: none;
 }
@@ -88,14 +84,7 @@ header h3 {  float: left; }
   padding: 30px;
 }
 
-#welcome {
-  background: var(--primary);
-  color: white;
-}
-
-#welcome h2, #begin h2 {  margin-top: 14px; }
-
-#welcome p, #begin p {
+#welcome p, #begin p, .services-header p, .contact-header p {
   margin: auto;
   margin-top: 14px;
   line-height: 1.5;
@@ -136,3 +125,98 @@ img {
 
 .detail p {  margin-top: 10px;  }
 
+.services-header {
+  padding: 1.5vw;
+  width: 100%;
+  text-align: center;
+}
+
+.services-detail {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2vw;
+  padding: 4vw 3vw;
+  background: rgb(238, 236, 236);
+}
+
+.service {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.service i {
+  padding: 20px;
+  border-radius: 12px; 
+}
+
+.service h3 {
+  margin-top: 15px;
+}
+
+.service p {
+  padding: 1vw;
+}
+
+.contact-header {
+  width: 100%;
+  background: rgb(92, 90, 90);
+  color: white;
+  padding: 1.5vw;
+  text-align: center;
+}
+
+.contactUs h3 {
+  padding: 1.5vw;
+  margin-top: 2.5vw;
+  background: rgb(92, 90, 90);
+  color: white;
+  width: 100%
+}
+
+.contactUs div {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.contactUs label {
+  margin-top: 16px;
+  margin-left: 2.25vw;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contactUs input, .contactUs textarea {
+  padding: 0.75vw;
+  width: 95%;
+  font-size: 15px;
+  margin-left: 1.5vw;
+}
+
+.contactUs textarea {
+  height: 100px;  
+}
+
+.contactUs .button {
+  padding: 8px;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-left: 1.5vw;
+  width: 100px;
+  border-radius: 8px;
+  border: none;
+}
+
+footer {
+  font: 18px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: black;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 3vw;
+}
+
+footer span {
+  font-size: 22px;
+  font-weight: bold;
+  color: yellowgreen;
+}
