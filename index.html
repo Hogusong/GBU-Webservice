@@ -43,19 +43,19 @@
   <section id="about">
     <img src="img/about.jpg" alt="About Us">
     <div class="aboutus">
-      <button class="title-btn">What We Do</button>
+      <button class="title-btn" onclick="myFunction('what')">What We Do</button>
       <div id="what" class="content-hide detail">
         <h4>We Do It All</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, vero iste debitis impedit sapiente inventore, quaerat totam dolor quod maxime nemo consectetur nobis eos excepturi veritatis omnis sit. Iste, consectetur.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, deleniti labore laudantium natus obcaecati ratione sint neque corrupti!</p>
       </div>
 
-      <button class="title-btn">Who We Are</button>
+      <button class="title-btn" onclick="myFunction('who')">Who We Are</button>
       <div id="who" class="content-hide detail">
         <h4>We Are GBU Team</h4>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam dolore dolores reiciendis, inventore nihil, at voluptate, vel nisi quod veritatis ex voluptates delectus ipsa.</p>
       </div>
-      <button class="title-btn">Where We Are</button>
+      <button class="title-btn" onclick="myFunction('where')">Where We Are</button>
       <div id="where" class="content-hide detail">
         <h4>We Are Everywhere</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum maiores ab deleniti! Quia, fugiat amet.</p>
@@ -100,14 +100,14 @@
     </div>
     <div class="contactUs">
       <h3>Contact Us</h3>
-      <div>
+      <div class="contact-info">
         <label>Name</label>
         <input type="text" placeholder="Enter Name" id="name">
         <label>Email</label>
         <input type="Email" placeholder="Enter Email" id="email">
         <label>Message</label>
         <textarea id="message" placeholder="Your message here ..."></textarea>
-        <button class="button primary-color" type="submit">Submit</button>
+        <button class="contact-btn primary-color" type="submit">Submit</button>
       </div>
     </div>
   </section>
@@ -115,5 +115,17 @@
   <footer>
     <span>G</span>od<span>B</span>less<span>U</span> Web Services &copy; 2018
   </footer>
+
+  <script>
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      console.log(x.className.indexOf("content-show"))
+      if (x.className.indexOf("content-show") === -1) {
+        x.className += " content-show" ;
+      } else {
+        x.className = x.className.replace(" content-show", "");
+      }
+    }
+  </script>
 </body>
 </html>

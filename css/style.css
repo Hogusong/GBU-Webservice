@@ -74,7 +74,7 @@ header h3 {  float: left; }
   border: none;
 }
 
-.start:hover {
+.start:hover, .contact-btn:hover {
   background: greenyellow;
   color: #000;
 }
@@ -100,13 +100,7 @@ header h3 {  float: left; }
   padding: 50px 1vw;  
 }
 
-img {
-  width: 48vw
-}
-
-.aboutus {
-  width: 48vw;
-}
+.aboutus, img {  width: 48vw  }
 
 .title-btn {
   background: black;
@@ -121,6 +115,10 @@ img {
   background: lightgray;
   color: black;
 }
+
+.content-hide{  display: none!important; } 
+.content-show{  display: block!important; }
+
 .detail { margin: 20px 10px; }
 
 .detail p {  margin-top: 10px;  }
@@ -149,13 +147,9 @@ img {
   border-radius: 12px; 
 }
 
-.service h3 {
-  margin-top: 15px;
-}
+.service h3 {  margin-top: 15px;    }
 
-.service p {
-  padding: 1vw;
-}
+.service p {  padding: 1vw;   }
 
 .contact-header {
   width: 100%;
@@ -173,7 +167,7 @@ img {
   width: 100%
 }
 
-.contactUs div {
+.contact-info {
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -192,11 +186,9 @@ img {
   margin-left: 1.5vw;
 }
 
-.contactUs textarea {
-  height: 100px;  
-}
+.contactUs textarea {  height: 100px;  }
 
-.contactUs .button {
+.contact-btn {
   padding: 8px;
   font-size: 20px;
   margin-top: 15px;
