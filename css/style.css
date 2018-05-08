@@ -1,11 +1,11 @@
-:root {
-  --primary: orangered;
-}
+:root {  --primary: orangered;  }
 
 * {
   margin: 0;
   padding: 0;
 }
+
+body {  font-size: 18px;  }
 
 h1 {  font-size: 45px;  }
 h2 {  font-size: 35px;  }
@@ -16,26 +16,21 @@ header {
   position: fixed;
   background: greenyellow;
   width: 100%;
-  min-height: 60px; 
+  padding: 16px;
 }
 
-header h3 {
-  float: left;
-  margin: 15px 0 0 15px;
-}
+header h3 {  float: left; }
 
 .main-nav {
   float: right;
-  margin-top: 18px;
+  margin-right: 2vw;
+  margin-top: 3px;
 }
 
 .main-nav a {
-  display: inline;
   text-decoration: none;
   padding: 10px 15px;
-  margin-right: 5px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 18px;
   font-weight: bold;
   color: black;
 }
@@ -59,7 +54,7 @@ header h3 {
 
 #showcase hr {
   margin: auto;
-  margin-top: 25px;
+  margin-top: 30px;
   border: 2px green solid;
   width: 330px;
 }
@@ -67,8 +62,7 @@ header h3 {
 #showcase p {
   color: white;
   margin: auto;
-  margin-top: 25px;
-  font-size: 18px;
+  margin-top: 30px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   line-height: 1.6;
   width: 70vw;
@@ -77,9 +71,68 @@ header h3 {
 .start {
   padding: 8px 15px;
   font-size: 20px;
-  margin-top: 30px;
+  margin-top: 40px;
   background: var(--primary);
   color: white;
   border-radius: 8px;
   border: none;
 }
+
+.start:hover {
+  background: greenyellow;
+  color: #000;
+}
+
+#welcome, #begin {
+  text-align: center;
+  padding: 30px;
+}
+
+#welcome {
+  background: var(--primary);
+  color: white;
+}
+
+#welcome h2, #begin h2 {  margin-top: 14px; }
+
+#welcome p, #begin p {
+  margin: auto;
+  margin-top: 14px;
+  line-height: 1.5;
+  width: 70vw;
+}
+
+#begin {  background: lightgray;  }
+
+#about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1vw;
+  padding: 50px 1vw;  
+}
+
+img {
+  width: 48vw
+}
+
+.aboutus {
+  width: 48vw;
+}
+
+.title-btn {
+  background: black;
+  color: white;
+  padding: 8px;
+  width: 48vw;
+  font-size: 18px;
+  text-align: left;
+}
+
+.title-btn:hover {
+  background: lightgray;
+  color: black;
+}
+.detail { margin: 20px 10px; }
+
+.detail p {  margin-top: 10px;  }
+
