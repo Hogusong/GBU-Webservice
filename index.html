@@ -25,7 +25,8 @@
     <hr>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut quos beatae magni magnam veniam illum quae perspiciatis? Quae ex, saepe obcaecati consectetur numquam sit ipsam ut aliquam illo et at.</p>
     <!-- Trigger/Open the Modal -->
-    <button class="start primary-color">Start Here</button>
+    <button onclick="document.getElementById('modal-start').style.display='block'"
+            class="start-btn primary-color">Start Here</button>
   </section>
   <!-- Welcome Home -->
   <section class="primary-color" id="welcome">
@@ -115,6 +116,26 @@
   <footer>
     <span>G</span>od<span>B</span>less<span>U</span> Web Services &copy; 2018
   </footer>
+
+  <!-- The Modal : start -->
+  <div id="modal-start" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span onclick="document.getElementById('modal-start').style.display='none'">
+            &times;</span>
+        <h3>Get Started</h3>
+      </div>
+      <div clsass="modal-info">
+        <label class="modal-label">Name</label>
+        <input class="modal-input" type="text" placeholder="Enter name" id="name">
+        <label class="modal-label">Email</label>
+        <input class="modal-input" type="Email" placeholder="Enter Email" id="email">
+        <label class="modal-label">Password</label>
+        <input class="modal-input" type="password" placeholder="Enter Password" id="password">
+        <button type="submit" class="modal-btn primary-color">Submit</button>
+      </div>
+    </div>    
+  </div>
 
   <script>
     function myFunction(id) {

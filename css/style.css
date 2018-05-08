@@ -66,7 +66,7 @@ header h3 {  float: left; }
   width: 70vw;
 }
 
-.start {
+.start-btn {
   padding: 8px 15px;
   font-size: 20px;
   margin-top: 40px;
@@ -74,7 +74,7 @@ header h3 {  float: left; }
   border: none;
 }
 
-.start:hover, .contact-btn:hover {
+.start-btn:hover, .contact-btn:hover, .modal-btn:hover {
   background: greenyellow;
   color: #000;
 }
@@ -116,7 +116,7 @@ header h3 {  float: left; }
   color: black;
 }
 
-.content-hide{  display: none!important; } 
+.content-hide{  display: none!important; }
 .content-show{  display: block!important; }
 
 .detail { margin: 20px 10px; }
@@ -174,6 +174,7 @@ header h3 {  float: left; }
 
 .contactUs label {
   margin-top: 16px;
+  margin-bottom: 10px;
   margin-left: 2.25vw;
   font-size: 18px;
   font-weight: bold;
@@ -188,11 +189,12 @@ header h3 {  float: left; }
 
 .contactUs textarea {  height: 100px;  }
 
-.contact-btn {
+.contact-btn, .modal-btn {
   padding: 8px;
   font-size: 20px;
   margin-top: 15px;
   margin-left: 1.5vw;
+  margin-bottom: 15px!important;
   width: 100px;
   border-radius: 8px;
   border: none;
@@ -211,4 +213,88 @@ footer span {
   font-size: 22px;
   font-weight: bold;
   color: yellowgreen;
+}
+
+.modal {
+  z-index: 3;
+  display: none;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background-color:rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  margin: auto;
+  margin-top: 100px;
+  padding-top: 15px; 
+  background: white;
+  position: relative;
+  outline: 0;
+  width: 600px;
+}
+
+.modal-header {
+  min-height: 36px;
+  padding: 10px 20px;
+  margin: 20px 20px;
+  background: orangered;  
+}
+
+.modal-header span {  float: right;  }
+
+.modal-header h3 {   float: left;  }
+
+.modal-label {
+  display: block;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modal-input {
+  padding: 10px;
+  font-size: 15px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  width: 515px;
+}
+
+.modal-btn {
+  margin: 0 25px 30px 30px!important;
+}
+
+/* Media Queries */
+@media(max-width: 780px) {
+  header, #about {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  header {    text-align: center;  }
+
+  header h3 { margin-bottom: 20px; }
+
+  #about {  padding: 30px 2vw;   }
+
+  #about img, .aboutus, .title-btn {
+    width: 100%;
+  }
+  .detail {
+    width: 96%;
+  }
+
+  .services-detail {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 600px) {
+  .services-detail {
+    grid-template-columns: 1fr;
+  }  
 }
